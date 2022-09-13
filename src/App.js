@@ -2,6 +2,7 @@ import './App.css';
 import {useEffect, useState} from "react";
 import SearchIcon from "./search.svg"
 import MovieCard from './components/MovieCard';
+import DisplayUsers from './components/DisplayUsers';
 import Login from "./components/Login";
 
 const API_URL = "http://www.omdbapi.com?apikey=81ea74d6"
@@ -30,6 +31,7 @@ function App() {
       { user ? 
       <div>
       <h1>{user} logged in</h1> 
+      <DisplayUsers />
       <h1>My Movie App</h1>
       <div className='search'>
         <input
